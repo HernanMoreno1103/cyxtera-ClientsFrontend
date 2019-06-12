@@ -1,0 +1,101 @@
+<div class="card border-primary mb-3 ">
+    <div class="card-header">{{ 'NEW_CLIENT.TITTLE' | translate }}</div>
+
+    <alerta></alerta>
+    
+    <div class="card-body text-primary">
+        <form (ngSubmit)="create()" #f="ngForm">
+          <div class="row">
+              <div class="col-xs-4 col-sm-4 col-md-4">
+                  <label class="control-label">{{ 'NEW_CLIENT.LABEL_NAME' | translate }}</label>
+              </div>
+              <div class="col-xs-8 col-sm-8 col-md-8">
+                  <div class="input-group">
+                      <input class="form-control" name="name" #name="ngModel" [(ngModel)]="client.name" placeholder="Client name" required pattern="^[A-Za-záéíóúñÁÉÍÓÚÑ\s]+$" minlength="3"
+                        maxlength="20" />
+                  </div>
+                  <div *ngIf="name.invalid && (formEnviado)" class="control-label">
+                      <div *ngIf="name.errors.required">{{ 'COMMON.ERROR_REQUIRED' | translate }}</div>
+                      <div *ngIf="name.errors.pattern"> {{ 'COMMON.ERROR_PATTERN' | translate }}</div>
+                      <div *ngIf="name.errors.minlength">{{ 'COMMON.ERROR_MINLENGTH' | translate }}</div>
+                      <div *ngIf="name.errors.maxlength">{{ 'COMMON.ERROR_MAXLENGTH' | translate }}</div>
+                  </div>
+              </div>  
+          </div>
+
+          <div class="row">
+              <div class="col-xs-4 col-sm-4 col-md-4">
+                  <label class="control-label">{{ 'NEW_CLIENT.LABEL_PHONE' | translate }}</label>
+              </div>
+              <div class="col-xs-8 col-sm-8 col-md-8">
+                  <div class="input-group">
+                      <input class="form-control" name="phone" #phone="ngModel" [(ngModel)]="client.phone" placeholder="Client phone number" required pattern="^[0-9]*$" minlength="3"
+                        maxlength="20" />
+                  </div>
+                  <div *ngIf="phone.invalid && (formEnviado)" class="control-label">
+                      <div *ngIf="phone.errors.required">{{ 'COMMON.ERROR_REQUIRED' | translate }}</div>
+                      <div *ngIf="phone.errors.pattern"> {{ 'COMMON.ERROR_PATTERN' | translate }}</div>
+                      <div *ngIf="phone.errors.minlength">{{ 'COMMON.ERROR_MINLENGTH' | translate }}</div>
+                      <div *ngIf="phone.errors.maxlength">{{ 'COMMON.ERROR_MAXLENGTH' | translate }}</div>
+                  </div>
+              </div>  
+          </div>
+
+          <div class="row">
+              <div class="col-xs-4 col-sm-4 col-md-4">
+                  <label class="control-label">{{ 'NEW_CLIENT.LABEL_EMAIL' | translate }}</label>
+              </div>
+              <div class="col-xs-8 col-sm-8 col-md-8">
+                  <div class="input-group">
+                      <input class="form-control" name="email" #email="ngModel" [(ngModel)]="client.email" placeholder="Client email" required pattern="^[_a-zA-Z0-9-]+(\.[_a-zA-Z0-9-]+)*@[a-zA-Z0-9-]+(\.[a-zA-Z0-9-]+)*(\.[a-zA-Z]{2,3})$" minlength="3"
+                        maxlength="20" />
+                  </div>
+                  <div *ngIf="email.invalid && (formEnviado)" class="control-label">
+                      <div *ngIf="email.errors.required">{{ 'COMMON.ERROR_REQUIRED' | translate }}</div>
+                      <div *ngIf="email.errors.pattern"> {{ 'COMMON.ERROR_PATTERN' | translate }}</div>
+                      <div *ngIf="email.errors.minlength">{{ 'COMMON.ERROR_MINLENGTH' | translate }}</div>
+                      <div *ngIf="email.errors.maxlength">{{ 'COMMON.ERROR_MAXLENGTH' | translate }}</div>
+                  </div>
+              </div>  
+          </div>
+
+          <div class="row">
+              <div class="col-xs-4 col-sm-4 col-md-4">
+                  <label class="control-label">{{ 'NEW_CLIENT.LABEL_START_DATE' | translate }}</label>
+              </div>
+              <div class="col-xs-8 col-sm-8 col-md-8">
+                  <div class="input-group">
+                      <input class="form-control" name="startDate" #startDate="ngModel" [(ngModel)]="client.startDate" placeholder="Client start date yyyy-MM-dd" required minlength="3"
+                        maxlength="20" />
+                  </div>
+                  <div *ngIf="name.invalid && (formEnviado)" class="control-label">
+                      <div *ngIf="name.errors.required">{{ 'COMMON.ERROR_REQUIRED' | translate }}</div>
+                      <div *ngIf="name.errors.minlength">{{ 'COMMON.ERROR_MINLENGTH' | translate }}</div>
+                      <div *ngIf="name.errors.maxlength">{{ 'COMMON.ERROR_MAXLENGTH' | translate }}</div>
+                  </div>
+              </div>  
+          </div>
+
+          <div class="row">
+              <div class="col-xs-4 col-sm-4 col-md-4">
+                  <label class="control-label">{{ 'NEW_CLIENT.LABEL_END_DATE' | translate }}</label>
+              </div>
+              <div class="col-xs-8 col-sm-8 col-md-8">
+                  <div class="input-group">
+                      <input class="form-control" name="endDate" #endDate="ngModel" [(ngModel)]="client.endDate" placeholder="Client end date yyyy-MM-dd" required minlength="3"
+                        maxlength="20" />
+                  </div>
+                  <div *ngIf="endDate.invalid && (formEnviado)" class="control-label">
+                      <div *ngIf="endDate.errors.required">{{ 'COMMON.ERROR_REQUIRED' | translate }}</div>
+                      <div *ngIf="endDate.errors.minlength">{{ 'COMMON.ERROR_MINLENGTH' | translate }}</div>
+                      <div *ngIf="endDate.errors.maxlength">{{ 'COMMON.ERROR_MAXLENGTH' | translate }}</div>
+                  </div>
+              </div>  
+          </div>
+
+          <div class="btn-group">
+              <button type="submit" class="btn btn-danger" >{{ 'COMMON.BUTTON.OK' | translate }}</button>
+          </div>
+        </form>
+    </div>
+</div>

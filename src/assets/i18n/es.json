@@ -1,0 +1,42 @@
+{
+  "COMMON": {
+    "LABEL_MENU": "Menu",
+    "LABEL_LOADING": "Loading...",
+    "ERROR_REQUIRED": "Required",
+    "ERROR_PATTERN": "Pattern",
+    "ERROR_MINLENGTH": "Min length",
+    "ERROR_MAXLENGTH": "Max Lenght",
+    "BUTTON": {
+      "NEW": "New",
+      "EXPORT": "Export",
+      "OK": "OK",
+      "FIND": "Find"
+    }
+  },
+
+  "CLIENTS": {
+    "TITTLE": "Clients",
+    "SUB_TITTLE": "Clients List",
+    "LABEL_SHARED_KEY": "Shared key",
+    "LABEL_BUSINNESS_ID": "Business ID",
+    "LABEL_EMAIL": "Email",
+    "LABEL_PHONE": "Phone",
+    "LABEL_START_DATE": "Start Date",
+    "LABEL_END_DATE": "End Date"
+  },
+
+  "NEW_CLIENT": {
+    "TITTLE": "Create New Client",
+    "LABEL_NAME": "Name",
+    "LABEL_EMAIL": "Email",
+    "LABEL_PHONE": "Phone",
+    "LABEL_START_DATE": "Start Date",
+    "LABEL_END_DATE": "End Date"
+  },
+
+  "ERROR": {
+    "MESSAGE": "Page not found!",
+    "DETAIL_MESSAGE": "The page you are trying to access has not been found."
+  }
+
+}

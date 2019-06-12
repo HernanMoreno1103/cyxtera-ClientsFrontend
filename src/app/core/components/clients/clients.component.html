@@ -1,0 +1,48 @@
+
+<div class="card border-primary mb-3 ">
+    <div class="card-header">{{ 'CLIENTS.TITTLE' | translate }}</div>
+
+    <alerta></alerta>
+
+    <div class="card-body text-primary">
+        <div class="btn-group">
+            <button type="button" class="btn btn-primary btn-small"  (click)="new()"><i class="fa fa-pencil"></i> {{ 'COMMON.BUTTON.NEW' | translate }}</button>
+            <button type="button" class="btn btn-warning btn-small" (click)="download()"><i class="fa fa-download" ></i>{{ 'COMMON.BUTTON.EXPORT' | translate }}</button>
+        </div>
+    </div>
+
+    <div class="card-body text-primary">
+        <div class="btn-group">
+            <input class="form-control" name="sharedKey" [(ngModel)]="sharedKey" placeholder="Find by sharedKey" />
+            <button type="button" class="btn btn-success btn-small" (click)="find()">{{ 'COMMON.BUTTON.FIND' | translate }}</button>
+        </div>
+    </div>
+
+    <div class="card-body text-primary">
+      <h5 class="card-title">{{ 'CLIENTS.SUB_TITTLE' | translate }}</h5>
+  
+      <table class="table table-bordered table-striped">
+        <thead>
+          <tr>
+            <th>{{ 'CLIENTS.LABEL_SHARED_KEY' | translate }}</th>
+            <th>{{ 'CLIENTS.LABEL_BUSINNESS_ID' | translate }}</th>
+            <th>{{ 'CLIENTS.LABEL_EMAIL' | translate }}</th>
+            <th>{{ 'CLIENTS.LABEL_PHONE' | translate }}</th>
+            <th>{{ 'CLIENTS.LABEL_START_DATE' | translate }}</th>
+            <th>{{ 'CLIENTS.LABEL_END_DATE' | translate }}</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let client of clients">
+            <td>{{ client.sharedKey }}</td>
+            <td>{{ client.name }}</td>
+            <td>{{ client.phone }}</td>
+            <td>{{ client.email }}</td>
+            <td>{{ client.startDate }}</td>
+            <td>{{ client.endDate }}</td>
+          </tr>
+        </tbody>
+      </table>
+  
+    </div>
+</div>
